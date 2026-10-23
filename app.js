@@ -1,5 +1,5 @@
 // 👉 After deploying the backend on Render, put its URL here (keep "/api" at the end)
-const API = "https://YOUR-SERVICE-NAME.onrender.com/api";
+const API = " https://queueless-backend-hdh8.onrender.com/api";
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
