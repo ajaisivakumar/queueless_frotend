@@ -1,0 +1,40 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f3f6fb; color: #1f2937; }
+header { background: #1d4ed8; color: #fff; padding: 18px 24px; }
+header h1 { font-size: 26px; }
+header p { opacity: .9; font-size: 14px; }
+.conn { margin-left: 10px; padding: 2px 8px; border-radius: 10px; background: #f59e0b; font-size: 12px; }
+.conn.ok { background: #16a34a; }
+.conn.bad { background: #dc2626; }
+nav { display: flex; gap: 6px; padding: 10px 24px; background: #fff; border-bottom: 1px solid #e5e7eb; flex-wrap: wrap; }
+.tab { background: #eef2ff; color: #1d4ed8; }
+.tab.active { background: #1d4ed8; color: #fff; }
+main { max-width: 950px; margin: 20px auto; padding: 0 16px; }
+.panel { display: none; }
+.panel.active { display: block; }
+h2 { margin: 18px 0 10px; font-size: 20px; }
+h2 small { font-size: 13px; font-weight: normal; color: #6b7280; margin-left: 8px; }
+button { padding: 9px 16px; border: 0; border-radius: 6px; background: #1d4ed8; color: #fff; cursor: pointer; font-size: 14px; }
+button:hover { opacity: .9; }
+button.green { background: #16a34a; }
+button.red { background: #dc2626; }
+button.small { padding: 5px 10px; font-size: 12px; }
+input { padding: 9px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 100%; max-width: 320px; margin: 4px 0 8px; display: block; }
+.row { display: flex; gap: 8px; align-items: center; margin: 12px 0; flex-wrap: wrap; }
+.row input { margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.card, .box { background: #fff; padding: 16px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.box h3 { font-size: 16px; margin-bottom: 6px; }
+.box .tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; color: #fff; margin-bottom: 8px; }
+.tag.FREE { background: #16a34a; }
+.tag.BUSY { background: #dc2626; }
+.box .actions { margin-top: 10px; display: flex; gap: 6px; }
+.big { font-size: 30px; font-weight: bold; color: #1d4ed8; }
+.stat .label { font-size: 13px; color: #6b7280; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+th, td { padding: 10px 12px; text-align: left; font-size: 14px; border-bottom: 1px solid #eef0f3; }
+th { background: #eef2ff; color: #1d4ed8; }
+.result { margin-top: 14px; padding: 14px; background: #eef2ff; border-radius: 8px; line-height: 1.7; }
+.error { color: #dc2626; margin-top: 10px; }
+.empty { text-align: center; color: #6b7280; padding: 16px; }
+@media (max-width: 600px) { th, td { padding: 8px 6px; font-size: 12px; } }

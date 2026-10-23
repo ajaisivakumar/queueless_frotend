@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QueueLess – Smart Waiting Time Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>QueueLess</h1>
+    <p>Smart Waiting Time Predictor <span id="conn" class="conn">connecting…</span></p>
+  </header>
+
+  <nav>
+    <button class="tab active" data-tab="dashboard">Dashboard</button>
+    <button class="tab" data-tab="add">Add Customer</button>
+    <button class="tab" data-tab="status">Check Status</button>
+    <button class="tab" data-tab="report">Daily Report</button>
+  </nav>
+
+  <main>
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="panel active">
+      <h2>Service Counters</h2>
+      <div id="counters" class="grid"></div>
+      <div class="row">
+        <input id="counterName" placeholder="New counter name (e.g. Counter 2)">
+        <button onclick="addCounter()">Add Counter</button>
+      </div>
+
+      <h2>Waiting Queue <small id="avgInfo"></small></h2>
+      <table>
+        <thead><tr><th>Queue No.</th><th>Name</th><th>Joined</th><th>Position</th><th>Est. Wait</th><th></th></tr></thead>
+        <tbody id="waitingBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ADD CUSTOMER -->
+    <section id="add" class="panel">
+      <h2>Add Customer to Queue</h2>
+      <div class="card">
+        <input id="custName" placeholder="Customer name">
+        <input id="custPhone" placeholder="Phone (optional)">
+        <button onclick="addCustomer()">Generate Queue Number</button>
+        <div id="addResult"></div>
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <section id="status" class="panel">
+      <h2>Check Queue Status</h2>
+      <div class="card">
+        <input id="statusNo" type="number" min="1" placeholder="Enter your queue number">
+        <button onclick="checkStatus()">Check</button>
+        <div id="statusResult"></div>
+      </div>
+    </section>
+
+    <!-- REPORT -->
+    <section id="report" class="panel">
+      <h2>Daily Report</h2>
+      <div id="reportCards" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
